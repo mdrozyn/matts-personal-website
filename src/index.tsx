@@ -1,19 +1,12 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { BioPage } from './routes/BioPage';
-import { HomePage } from './routes/HomePage';
+import { Main } from './components/Main';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="bio" element={<BioPage />} />
-    </Routes>
-  </BrowserRouter>
+  <Main/>
 );
 
