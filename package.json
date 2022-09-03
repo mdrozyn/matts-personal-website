@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-transition-group": "^4.4.5"
+    "@types/react-transition-group": "^4.4.5",
+    "@types/webpack-env": "^1.18.0"
   }
 }

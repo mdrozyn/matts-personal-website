@@ -1,0 +1,21 @@
+.adaptive-photo-layout ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.adaptive-photo-layout li {
+  height: 40vh;
+  flex-grow: 1;
+}
+
+.adaptive-photo-layout li:last-child {
+  flex-grow: 10;
+}
+
+.adaptive-photo-layout img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
