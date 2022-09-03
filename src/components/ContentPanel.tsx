@@ -1,7 +1,8 @@
 import { Routes, Route, useLocation, Navigate } from "react-router-dom"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
-import { ArtPage } from "../routes/Art"
+import { ArtPage } from "../routes/ArtPage"
 import { BlogPage } from "../routes/BlogPage"
+import { ContactPage } from "../routes/ContactPage"
 import { DevelopmentPage } from "../routes/DevelopmentPage"
 import { IntroductionPage } from "../routes/IntroductionPage"
 import { MusicPage } from "../routes/MusicPage"
@@ -24,6 +25,7 @@ export function ContentPanel() {
                         <Route path="art" element={<ArtPage />} />
                         <Route path="outdoors" element={<OutdoorsPage />} />
                         <Route path="blog" element={<BlogPage />} />
+                        <Route path="contact" element={<ContactPage />} />
                     </Routes>
                 </CSSTransition>
             </TransitionGroup>
