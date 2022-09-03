@@ -1,9 +1,14 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { BioPage } from './routes/BioPage';
 import { HomePage } from './routes/HomePage';
 import { SideNavBar } from './components/SideNavBar';
+import { IntroductionPage } from './routes/IntroductionPage';
+import { DevelopmentPage } from './routes/DevelopmentPage';
+import { MusicPage } from './routes/MusicPage';
+import { PhotosPage } from './routes/PhotosPage';
+import { BlogPage } from './routes/BlogPage';
+import { OutdoorsPage } from './routes/Outdoors';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -18,7 +23,12 @@ root.render(
         <div className='d-flex flex-column'>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="bio" element={<BioPage />} />
+            <Route path="introduction" element={<IntroductionPage />} />
+            <Route path="development" element={<DevelopmentPage />} />
+            <Route path="music" element={<MusicPage />} />
+            <Route path="photos" element={<PhotosPage />} />
+            <Route path="blog" element={<BlogPage />} />
+            <Route path="outdoors" element={<OutdoorsPage />} />
           </Routes>
         </div>
       </div>

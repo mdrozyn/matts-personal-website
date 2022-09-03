@@ -1,4 +1,4 @@
-export function BioPage(){
+export function IntroductionPage(){
     return (
         <>
         <h1>Bio Page</h1>

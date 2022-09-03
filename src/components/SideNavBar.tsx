@@ -17,9 +17,39 @@ export function SideNavBar() {
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="/bio" className={({ isActive }) => isActive ? "nav-link text-white active" : "nav-link text-white"} aria-current="page">
+                        <NavLink to="introduction" className={({ isActive }) => isActive ? "nav-link text-white active" : "nav-link text-white"} aria-current="page">
                             <svg className="bi pe-none me-2" width="16" height="16"></svg>
-                            Bio
+                            Introduction
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="development" className={({ isActive }) => isActive ? "nav-link text-white active" : "nav-link text-white"} aria-current="page">
+                            <svg className="bi pe-none me-2" width="16" height="16"></svg>
+                            Development
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="music" className={({ isActive }) => isActive ? "nav-link text-white active" : "nav-link text-white"} aria-current="page">
+                            <svg className="bi pe-none me-2" width="16" height="16"></svg>
+                            Music
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="photos" className={({ isActive }) => isActive ? "nav-link text-white active" : "nav-link text-white"} aria-current="page">
+                            <svg className="bi pe-none me-2" width="16" height="16"></svg>
+                            Photos
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="blog" className={({ isActive }) => isActive ? "nav-link text-white active" : "nav-link text-white"} aria-current="page">
+                            <svg className="bi pe-none me-2" width="16" height="16"></svg>
+                            Blog
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="outdoors" className={({ isActive }) => isActive ? "nav-link text-white active" : "nav-link text-white"} aria-current="page">
+                            <svg className="bi pe-none me-2" width="16" height="16"></svg>
+                            Outdoors
                         </NavLink>
                     </li>
                 </ul>
