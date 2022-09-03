@@ -22,7 +22,6 @@ root.render(
         <SideNavBar />
         <div className='d-flex flex-column'>
           <Routes>
-            <Route path="/" element={<HomePage />} />
             <Route path="introduction" element={<IntroductionPage />} />
             <Route path="development" element={<DevelopmentPage />} />
             <Route path="music" element={<MusicPage />} />

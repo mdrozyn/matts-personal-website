@@ -1,21 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export function SideNavBar() {
     return (
         <>
             <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style={{ width: 280 }}>
-                <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <Link to="introduction" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <svg className="bi pe-none me-2" style={{ width: 40, height: 32 }}></svg>
                     <span className="fs-4">Matt Drozynski</span>
-                </a>
+                </Link>
                 <hr></hr>
                 <ul className="nav nav-pills flex-column mb-auto">
-                    <li className="nav-item">
-                        <NavLink to="/" className={({ isActive }) => isActive ? "nav-link text-white active" : "nav-link text-white"} aria-current="page">
-                            <svg className="bi pe-none me-2" width="16" height="16"></svg>
-                            Home
-                        </NavLink>
-                    </li>
                     <li className="nav-item">
                         <NavLink to="introduction" className={({ isActive }) => isActive ? "nav-link text-white active" : "nav-link text-white"} aria-current="page">
                             <svg className="bi pe-none me-2" width="16" height="16"></svg>
@@ -41,15 +35,15 @@ export function SideNavBar() {
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="blog" className={({ isActive }) => isActive ? "nav-link text-white active" : "nav-link text-white"} aria-current="page">
-                            <svg className="bi pe-none me-2" width="16" height="16"></svg>
-                            Blog
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
                         <NavLink to="outdoors" className={({ isActive }) => isActive ? "nav-link text-white active" : "nav-link text-white"} aria-current="page">
                             <svg className="bi pe-none me-2" width="16" height="16"></svg>
                             Outdoors
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="blog" className={({ isActive }) => isActive ? "nav-link text-white active" : "nav-link text-white"} aria-current="page">
+                            <svg className="bi pe-none me-2" width="16" height="16"></svg>
+                            Blog
                         </NavLink>
                     </li>
                 </ul>
