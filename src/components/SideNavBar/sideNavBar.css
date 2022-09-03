@@ -1,3 +1,10 @@
 a.nav-link:not(.active):hover{
 color: #0D6EFD !important;
 }
+
+.side-bar-nav{
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+}

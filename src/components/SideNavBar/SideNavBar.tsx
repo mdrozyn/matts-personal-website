@@ -3,8 +3,8 @@ import './sideNavBar.css';
 export function SideNavBar() {
     return (
         <>
-            <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark text-center" style={{ width: 280 }}>
-            <img src="https://github.com/mdrozyn.png" alt="" width="150" height="150" style={{margin: "0 auto"}} className="rounded-circle my-3"></img>
+            <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark text-center side-bar-nav" >
+                <img src="https://github.com/mdrozyn.png" alt="" width="150" height="150" style={{ margin: "0 auto" }} className="rounded-circle my-3"></img>
                 <Link to="introduction" className="d-flex align-items-center mb-3 mb-md-0 mx-md-auto text-white text-decoration-none text-center">
                     <span className="fs-4">Matt Drozynski</span>
                 </Link>

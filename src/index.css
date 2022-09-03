@@ -39,3 +39,7 @@ code {
   opacity: 0;
   transition: opacity 150ms;
 }
+
+.page-wrapper{
+  margin-left: 280px;
+}
