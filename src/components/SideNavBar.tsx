@@ -55,7 +55,7 @@ export function SideNavBar() {
                 </ul>
                 <hr></hr>
                 <div className="dropdown">
-                    <a href="#" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    {/* <a href="#" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://github.com/mdrozyn.png" alt="" width="32" height="32" className="rounded-circle me-2"></img>
                         <strong>mdrozyn</strong>
                     </a>
@@ -65,7 +65,7 @@ export function SideNavBar() {
                         <li><a className="dropdown-item" href="#">Profile</a></li>
                         <li><hr className="dropdown-divider"></hr></li>
                         <li><a className="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
         </>
