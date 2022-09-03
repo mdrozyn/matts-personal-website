@@ -35,6 +35,12 @@ export function SideNavBar() {
                         </NavLink>
                     </li>
                     <li className="nav-item">
+                        <NavLink to="art" className={({ isActive }) => isActive ? "nav-link text-white active" : "nav-link text-white"} aria-current="page">
+                            <svg className="bi pe-none me-2" width="16" height="16"></svg>
+                            Art
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
                         <NavLink to="outdoors" className={({ isActive }) => isActive ? "nav-link text-white active" : "nav-link text-white"} aria-current="page">
                             <svg className="bi pe-none me-2" width="16" height="16"></svg>
                             Outdoors
