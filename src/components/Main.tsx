@@ -1,6 +1,6 @@
 import { BrowserRouter} from "react-router-dom"
 import { ContentPanel } from "./ContentPanel"
-import { SideNavBar } from "./SideNavBar"
+import { SideNavBar } from "./SideNavBar/SideNavBar"
 
 export function Main() {
     return (

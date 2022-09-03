@@ -1,0 +1,3 @@
+a.nav-link:not(.active):hover{
+color: #0D6EFD !important;
+}
