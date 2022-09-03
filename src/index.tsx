@@ -1,7 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { HomePage } from './routes/HomePage';
 import { SideNavBar } from './components/SideNavBar';
 import { IntroductionPage } from './routes/IntroductionPage';
 import { DevelopmentPage } from './routes/DevelopmentPage';
@@ -26,8 +25,8 @@ root.render(
             <Route path="development" element={<DevelopmentPage />} />
             <Route path="music" element={<MusicPage />} />
             <Route path="photos" element={<PhotosPage />} />
-            <Route path="blog" element={<BlogPage />} />
             <Route path="outdoors" element={<OutdoorsPage />} />
+            <Route path="blog" element={<BlogPage />} />
           </Routes>
         </div>
       </div>
