@@ -5,8 +5,6 @@ import '../../thirdParty/styleSheets/photoviewer.css';
 export function AdaptivePhotoLayout() {
 
     const imagePaths = ImageManager.getArtPageImages();
-
-    let photoViewer: PhotoViewer;
     const photos: PhotoViewerImage[] = [];
 
     const onImageClick = (index: number) => {
@@ -14,10 +12,6 @@ export function AdaptivePhotoLayout() {
     }
 
     const displayPhotoViewer = (index: number) => {
-
-        if (photoViewer) {
-            closePhotoViewer();
-        }
 
         const photoViewerOptions: PhotoViewer.Options = {
             index: index,
@@ -36,21 +30,31 @@ export function AdaptivePhotoLayout() {
                 closed: () => {
                     document.body.style.overflow = 'visible';
                 },
-                changed: () => { } // I think this parameter should be optional?
+                changed: () => { }
             },
             headerToolbar: ['close'],
             footerToolbar: ['zoomIn', 'zoomOut', 'prev', 'next']
         }
 
-        photoViewer = new PhotoViewer(photos, photoViewerOptions);
+        new PhotoViewer(photos, photoViewerOptions);
 
-        window.addEventListener('resize', closePhotoViewer)
         document.body.style.overflow = 'hidden';
+        window.addEventListener('resize', closePhotoViewer);
+
+        const photoViewerElem = document.getElementsByClassName('photoviewer-stage');
+        let photoViewer = photoViewerElem[0];
+        if (photoViewer instanceof HTMLElement) {
+            photoViewer.onclick = function () {
+                closePhotoViewer();
+            }
+        }
     }
 
     const closePhotoViewer = () => {
-        // @ts-ignore can this be resolved with a type declaration file?
-        photoViewer.close();
+        const closeButton = document.getElementsByClassName("photoviewer-button-close");
+        if (closeButton[0] instanceof HTMLButtonElement) {
+            closeButton[0].click();
+        }
         document.body.style.overflow = 'visible';
     }
 
