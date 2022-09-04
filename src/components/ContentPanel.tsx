@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation, Navigate } from "react-router-dom"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
-import { ArtPage } from "../routes/ArtPage/ArtPage"
+import { ArtPage } from "../routes/ArtPage"
 import { BlogPage } from "../routes/BlogPage"
 import { ContactPage } from "../routes/ContactPage"
 import { DevelopmentPage } from "../routes/DevelopmentPage"

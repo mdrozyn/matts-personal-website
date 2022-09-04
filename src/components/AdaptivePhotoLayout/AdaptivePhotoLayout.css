@@ -1,16 +1,13 @@
 .adaptive-photo-layout .zoom {
- 
+  z-index: 0;
 }
 
 .adaptive-photo-layout .zoom:hover {
   transition: transform .2s;
-  transform: scale(1.3);
+  transform: scale(1.2);
   z-index: 1;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-}
-
-.adaptive-photo-layout .zoom:hover{
-
+  cursor: pointer;
 }
 
 .adaptive-photo-layout ul {
@@ -20,6 +17,7 @@
 }
 
 .adaptive-photo-layout li {
+  height: 35vh;
   flex-grow: 1;
 }
 
@@ -28,8 +26,10 @@
 }
 
 .adaptive-photo-layout img {
-  max-height: 300px;
-  min-width: 300px;
+  max-height: 100%;
+  min-width: 100%;
   object-fit: contain;
+  overflow: hidden;
   vertical-align: bottom;
+  background-color: white;
 }
