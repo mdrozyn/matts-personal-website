@@ -1,7 +1,7 @@
 export class ImageManager {
 
     static getArtPageImages(): string[] {
-
+        
         function importAll(r: any) {
             return r.keys().map(r);
         }

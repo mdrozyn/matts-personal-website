@@ -11,10 +11,11 @@ export function AdaptivePhotoLayout() {
                 {imagePaths.map((imageUrl, index) => {
                     return (
                         <li key={index}>
-                            <img src={imageUrl} alt="" />
+                            <img className='zoom' src={imageUrl} alt="" />
                         </li>
                     )
                 })}
+                <li></li>
             </ul>
         </div>
     )
