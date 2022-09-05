@@ -59,13 +59,14 @@
   background: none;
   border-width: 0;
   border-radius: 0;
-  color: inherit;
+  color: var(--color-white);
   cursor: pointer;
   outline: none;
 }
 
 .photoviewer-button:hover {
-  color: #111;
+  color: var(--color-primary-moderate);
+  cursor: pointer;
 }
 
 .photoviewer-button:focus {
@@ -122,6 +123,7 @@
   -ms-user-select: none;
   user-select: none;
   overflow: hidden;
+  color: var(--color-white);
 }
 
 .photoviewer-stage {
