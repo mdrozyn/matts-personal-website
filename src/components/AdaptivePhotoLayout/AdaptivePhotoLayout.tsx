@@ -46,6 +46,14 @@ export function AdaptivePhotoLayout() {
         }
     }
 
+    const closePhotoViewer = () => {
+        const closeButton = document.getElementsByClassName("photoviewer-button-close");
+        if (closeButton[0] instanceof HTMLButtonElement) {
+            closeButton[0].click();
+        }
+        document.body.style.overflow = 'visible';
+    }
+
     const addClosePhotoViewerOnStageClickEvent = () => {
         const photoViewerElem = document.getElementsByClassName('photoviewer-stage');
         let photoViewer = photoViewerElem[0];
@@ -56,7 +64,7 @@ export function AdaptivePhotoLayout() {
             }
         }
 
-        //close if you click in the navbar
+        //close if you click in the navbar, can this be better?
         const sideBarNavs = document.getElementsByClassName('side-bar-nav');
         let sideBarNav = sideBarNavs[0];
         if (sideBarNav instanceof HTMLElement) {
@@ -64,14 +72,6 @@ export function AdaptivePhotoLayout() {
                 closePhotoViewer();
             }
         }
-    }
-
-    const closePhotoViewer = () => {
-        const closeButton = document.getElementsByClassName("photoviewer-button-close");
-        if (closeButton[0] instanceof HTMLButtonElement) {
-            closeButton[0].click();
-        }
-        document.body.style.overflow = 'visible';
     }
 
     const formatImageTitles = () => {
