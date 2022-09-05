@@ -18,6 +18,7 @@ export function AdaptivePhotoLayout() {
             movable: false,
             modalHeight: window.innerHeight,
             modalWidth: window.innerWidth - 280,
+            fixedModalPos: true,
             initModalPos: {
                 top: 0,
                 right: 0,
