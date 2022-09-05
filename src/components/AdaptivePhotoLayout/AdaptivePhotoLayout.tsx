@@ -44,14 +44,17 @@ export function AdaptivePhotoLayout() {
 
     const addClosePhotoViewerOnStageClickEvent = () => {
         const photoViewerElem = document.getElementsByClassName('photoviewer-stage');
-        const sideBarNavs = document.getElementsByClassName('side-bar-nav');
         let photoViewer = photoViewerElem[0];
-        let sideBarNav = sideBarNavs[0];
+
         if (photoViewer instanceof HTMLElement) {
             photoViewer.onclick = function () {
                 closePhotoViewer();
             }
         }
+
+        //close if you click in the navbar
+        const sideBarNavs = document.getElementsByClassName('side-bar-nav');
+        let sideBarNav = sideBarNavs[0];
         if (sideBarNav instanceof HTMLElement) {
             sideBarNav.onclick = function () {
                 closePhotoViewer();
