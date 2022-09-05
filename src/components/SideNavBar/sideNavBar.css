@@ -1,10 +1,24 @@
-a.nav-link:not(.active):hover{
-color: #0D6EFD !important;
+a.nav-link:not(.active):hover {
+    color: var(--color-primary-moderate) !important;
 }
 
-.side-bar-nav{
+.side-bar-nav {
     width: 280px;
     height: 100vh;
     position: fixed;
     z-index: 1;
+    background-color: var(--color-neutral-strongest) !important;
+}
+
+.side-bar-nav a {
+    color: var(--color-white) !important;
+}
+
+.nav-link {
+    color: var(--color-white) !important;
+}
+
+.nav-link.active {
+    color: var(--color-white) !important;
+    background-color: var(--color-primary-moderate) !important;
 }
