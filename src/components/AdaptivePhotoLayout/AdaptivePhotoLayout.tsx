@@ -9,7 +9,7 @@ export function AdaptivePhotoLayout() {
         displayPhotoViewer(index);
     }
 
-    const displayPhotoViewer = (index: number) => {
+    const displayPhotoViewer = (index: number, pushNewState: boolean = true) => {
 
         const photoViewerOptions: PhotoViewer.Options = {
             index: index,
@@ -29,7 +29,7 @@ export function AdaptivePhotoLayout() {
                 closed: () => {
                     document.body.style.overflow = 'visible';
                 },
-                changed: () => { }
+                changed: (context, index) => { window.history.pushState({}, '', `#viewPhoto?id=${index}`) }
             },
             headerToolbar: ['close'],
             footerToolbar: ['zoomIn', 'zoomOut', 'prev', 'next']
@@ -40,6 +40,10 @@ export function AdaptivePhotoLayout() {
         document.body.style.overflow = 'hidden';
 
         addClosePhotoViewerOnStageClickEvent();
+
+        if (pushNewState) {
+            window.history.pushState({}, '', `#viewPhoto?id=${index}`);
+        }
     }
 
     const addClosePhotoViewerOnStageClickEvent = () => {
@@ -82,13 +86,24 @@ export function AdaptivePhotoLayout() {
         })
     }
 
+    const processQueryParams = () => {
+        const [hash, query] = window.location.hash?.split('?');
+        const params = Object.fromEntries(new URLSearchParams(query));
+
+        closePhotoViewer();
+
+        if (params.id !== undefined) {
+            displayPhotoViewer(Number(params.id), false);
+        }
+    }
+
     const imagePaths = ImageManager.getArtPageImages();
     const photos: PhotoViewerImage[] = [];
 
-    window.addEventListener('popstate', closePhotoViewer);
     window.addEventListener('resize', closePhotoViewer);
 
     formatImageTitles();
+    processQueryParams();
 
     return (
         <div className="adaptive-photo-layout">
