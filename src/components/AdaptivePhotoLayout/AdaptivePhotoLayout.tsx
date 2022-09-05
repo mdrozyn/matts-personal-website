@@ -63,8 +63,7 @@ export function AdaptivePhotoLayout() {
                 closePhotoViewer();
             }
         }
-
-        //close if you click in the navbar, can this be better?
+        
         const sideBarNavs = document.getElementsByClassName('side-bar-nav');
         let sideBarNav = sideBarNavs[0];
         if (sideBarNav instanceof HTMLElement) {
