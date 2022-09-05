@@ -2,10 +2,8 @@ import PhotoViewer from 'photoviewer';
 import { ImageManager } from '../utilities/ImageManager';
 import './AdaptivePhotoLayout.css';
 import '../../thirdParty/styleSheets/photoviewer.css';
-export function AdaptivePhotoLayout() {
 
-    const imagePaths = ImageManager.getArtPageImages();
-    const photos: PhotoViewerImage[] = [];
+export function AdaptivePhotoLayout() {
 
     const onImageClick = (index: number) => {
         displayPhotoViewer(index);
@@ -39,8 +37,11 @@ export function AdaptivePhotoLayout() {
         new PhotoViewer(photos, photoViewerOptions);
 
         document.body.style.overflow = 'hidden';
-        window.addEventListener('resize', closePhotoViewer);
 
+        addClosePhotoViewerOnStageClickEvent();
+    }
+
+    const addClosePhotoViewerOnStageClickEvent = () => {
         const photoViewerElem = document.getElementsByClassName('photoviewer-stage');
         let photoViewer = photoViewerElem[0];
         if (photoViewer instanceof HTMLElement) {
@@ -69,6 +70,12 @@ export function AdaptivePhotoLayout() {
             })
         })
     }
+
+    const imagePaths = ImageManager.getArtPageImages();
+    const photos: PhotoViewerImage[] = [];
+
+    window.addEventListener('popstate', closePhotoViewer);
+    window.addEventListener('resize', closePhotoViewer);
 
     formatImageTitles();
 
