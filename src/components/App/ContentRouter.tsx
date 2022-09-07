@@ -1,13 +1,14 @@
 import { Routes, Route, useLocation, Navigate } from "react-router-dom"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
-import { ArtPage } from "../routes/ArtPage/ArtPage"
-import { BlogPage } from "../routes/BlogPage"
-import { ContactPage } from "../routes/ContactPage"
-import { DevelopmentPage } from "../routes/DevelopmentPage"
-import { IntroductionPage } from "../routes/IntroductionPage"
-import { MusicPage } from "../routes/MusicPage"
-import { OutdoorsPage } from "../routes/Outdoors"
-import { PhotosPage } from "../routes/PhotosPage"
+import { ArtPage } from "../../routes/ArtPage/ArtPage"
+import { BlogPage } from "../../routes/BlogPage"
+import { ContactPage } from "../../routes/ContactPage"
+import { DevelopmentPage } from "../../routes/DevelopmentPage"
+import { IntroductionPage } from "../../routes/IntroductionPage"
+import { MusicPage } from "../../routes/MusicPage"
+import { OutdoorsPage } from "../../routes/Outdoors"
+import { PhotosPage } from "../../routes/PhotosPage"
+import { RunningPage } from "../../routes/RunningPage/RunningPage"
 
 export function ContentPanel() {
     const location = useLocation();
@@ -23,6 +24,7 @@ export function ContentPanel() {
                         <Route path="music" element={<MusicPage />} />
                         <Route path="photos" element={<PhotosPage />} />
                         <Route path="art" element={<ArtPage />} />
+                        <Route path="running" element={<RunningPage />} />
                         <Route path="outdoors" element={<OutdoorsPage />} />
                         <Route path="blog" element={<BlogPage />} />
                         <Route path="contact" element={<ContactPage />} />
