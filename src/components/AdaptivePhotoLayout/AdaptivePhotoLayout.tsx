@@ -1,5 +1,5 @@
 import PhotoViewer from 'photoviewer';
-import { ImageManager } from '../utilities/ImageManager';
+import { ImageManager } from '../../ultilities/ImageManager';
 import './AdaptivePhotoLayout.css';
 import '../../thirdParty/styleSheets/photoviewer.css';
 
