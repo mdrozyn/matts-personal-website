@@ -1,5 +1,4 @@
 import { Run, RunProps } from "./components/Run"
-import './RunningPage.css'
 import IMG_3336 from '../../images/RunningPage/TheCharcoalChallange/IMG_3336.jpg'
 import IMG_6365 from '../../images/RunningPage/TheCharcoalChallange/IMG_6365.jpg'
 import IMG_4524 from '../../images/RunningPage/ArtsAndParks/IMG_4524.jpg'
