@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/matts-personal-website/static/css/main.5684ef1f.css",
-    "main.js": "/matts-personal-website/static/js/main.5412d7c5.js",
+    "main.js": "/matts-personal-website/static/js/main.41d2f81a.js",
     "static/media/EyeVine.jpg": "/matts-personal-website/static/media/EyeVine.613fba2d94631f3bd470.jpg",
     "static/media/MushroomGrowth.jpg": "/matts-personal-website/static/media/MushroomGrowth.f2c468f95db89aba6506.jpg",
     "static/media/Scales.jpg": "/matts-personal-website/static/media/Scales.c546cc2dfa4307dc2fa7.jpg",
@@ -60,10 +60,10 @@
     "static/media/IMG_4524.jpg": "/matts-personal-website/static/media/IMG_4524.01704e28cd3fc9fdad4f.jpg",
     "index.html": "/matts-personal-website/index.html",
     "main.5684ef1f.css.map": "/matts-personal-website/static/css/main.5684ef1f.css.map",
-    "main.5412d7c5.js.map": "/matts-personal-website/static/js/main.5412d7c5.js.map"
+    "main.41d2f81a.js.map": "/matts-personal-website/static/js/main.41d2f81a.js.map"
   },
   "entrypoints": [
     "static/css/main.5684ef1f.css",
-    "static/js/main.5412d7c5.js"
+    "static/js/main.41d2f81a.js"
   ]
 }
