@@ -1,0 +1,35 @@
+.adaptive-photo-layout .zoom {
+  z-index: 0;
+}
+
+.adaptive-photo-layout .zoom:hover {
+  transition: transform .2s;
+  transform: scale(1.2);
+  z-index: 1;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.adaptive-photo-layout ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.adaptive-photo-layout li {
+  height: 35vh;
+  flex-grow: 1;
+}
+
+.adaptive-photo-layout li:last-child {
+  flex-grow: 10;
+}
+
+.adaptive-photo-layout img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  vertical-align: bottom;
+  background-color: white;
+}
