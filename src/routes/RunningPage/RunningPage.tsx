@@ -20,7 +20,7 @@ export function RunningPage() {
         ]
     },
     {
-        Name: "Arts And Parks 5k",
+        Name: "Arts and Parks 5k",
         Date: "July 16th 2022",
         Location: "Harrisburg Pa",
         Time: "23:32",
