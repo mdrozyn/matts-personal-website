@@ -1,18 +1,9 @@
-/* Style Guide */
 :root {
-
-
     --color-primary-strongest: #063070;
     --color-primary-strong: #0B5CD6;
     --color-primary-moderate: #0D6EFD;
     --color-primary-weak: #0C67F0;
     --color-primary-weakest: #0D6DFC;
-
-    /* --color-secondary-strongest: #212529;
-    --color-secondary-strong: #31373D;
-    --color-secondary-moderate: #64707D;
-    --color-secondary-weak: #B6CCE3;
-    --color-secondary-weakest: #CAE3FC; */
 
     --color-neutral-strongest: #212529;
     --color-neutral-strong: #31373D;
