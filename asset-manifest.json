@@ -1,18 +1,21 @@
 {
   "files": {
     "main.css": "/matts-personal-website/static/css/main.5684ef1f.css",
-    "main.js": "/matts-personal-website/static/js/main.41d2f81a.js",
+    "main.js": "/matts-personal-website/static/js/main.c344f91e.js",
     "static/media/EyeVine.jpg": "/matts-personal-website/static/media/EyeVine.613fba2d94631f3bd470.jpg",
     "static/media/MushroomGrowth.jpg": "/matts-personal-website/static/media/MushroomGrowth.f2c468f95db89aba6506.jpg",
     "static/media/Scales.jpg": "/matts-personal-website/static/media/Scales.c546cc2dfa4307dc2fa7.jpg",
+    "static/media/IMG_7037.jpg": "/matts-personal-website/static/media/IMG_7037.383d74bec71ecd47bc57.jpg",
     "static/media/IMG_6365.jpg": "/matts-personal-website/static/media/IMG_6365.befb203db6407e589eaf.jpg",
     "static/media/Eagle Totem.jpg": "/matts-personal-website/static/media/Eagle Totem.15be3d2c6736174e5338.jpg",
     "static/media/EyeMandala.jpg": "/matts-personal-website/static/media/EyeMandala.24a33820cf8692d53dd5.jpg",
     "static/media/Eye Moth Mandala.jpg": "/matts-personal-website/static/media/Eye Moth Mandala.80ba702d8f60ef976f39.jpg",
+    "static/media/IMG_7031.jpg": "/matts-personal-website/static/media/IMG_7031.e8e4ac6f9f982c552d66.jpg",
     "static/media/Rose.jpg": "/matts-personal-website/static/media/Rose.792de7fcaf3d27c5e3ae.jpg",
     "static/media/Mandala.jpg": "/matts-personal-website/static/media/Mandala.70ff9f656eee9e082e69.jpg",
     "static/media/Branches.jpg": "/matts-personal-website/static/media/Branches.26c93ba12b3fbf20ad7b.jpg",
     "static/media/Herring.jpg": "/matts-personal-website/static/media/Herring.bb6fa740c3efd50a6156.jpg",
+    "static/media/IMG_7034.jpg": "/matts-personal-website/static/media/IMG_7034.6e91b31caae3187c4cdb.jpg",
     "static/media/HotAirBalloon.jpg": "/matts-personal-website/static/media/HotAirBalloon.767b2fe1e307dca69536.jpg",
     "static/media/eye moth.jpg": "/matts-personal-website/static/media/eye moth.14483960e6ee1beb1dd2.jpg",
     "static/media/Deer.jpg": "/matts-personal-website/static/media/Deer.305ac3173a4b6f275d73.jpg",
@@ -26,6 +29,7 @@
     "static/media/Birds.jpg": "/matts-personal-website/static/media/Birds.dd09abe75387ffda53be.jpg",
     "static/media/LightHouse.jpg": "/matts-personal-website/static/media/LightHouse.77764ad483e7b730718a.jpg",
     "static/media/Imagination.jpg": "/matts-personal-website/static/media/Imagination.9dcfbac25ad5e9364f7b.jpg",
+    "static/media/IMG_3447.jpg": "/matts-personal-website/static/media/IMG_3447.1da142ba8ee51052dab1.jpg",
     "static/media/Flower 3.jpg": "/matts-personal-website/static/media/Flower 3.dc40a634f9c1aa31d1f7.jpg",
     "static/media/Snail 1.jpg": "/matts-personal-website/static/media/Snail 1.d0bf529a6ce6b351e94f.jpg",
     "static/media/HandCandle.jpg": "/matts-personal-website/static/media/HandCandle.a9438da59bdd94cd7efc.jpg",
@@ -57,13 +61,14 @@
     "static/media/Guitar Logo.jpg": "/matts-personal-website/static/media/Guitar Logo.13cad8964d884346e1c9.jpg",
     "static/media/Bouquet.jpg": "/matts-personal-website/static/media/Bouquet.583edace4cc511baa772.jpg",
     "static/media/Moth.jpg": "/matts-personal-website/static/media/Moth.01a29aa7945713a222da.jpg",
+    "static/media/IMG_5601.jpg": "/matts-personal-website/static/media/IMG_5601.60c2f941e8128be16e98.jpg",
     "static/media/IMG_4524.jpg": "/matts-personal-website/static/media/IMG_4524.01704e28cd3fc9fdad4f.jpg",
     "index.html": "/matts-personal-website/index.html",
     "main.5684ef1f.css.map": "/matts-personal-website/static/css/main.5684ef1f.css.map",
-    "main.41d2f81a.js.map": "/matts-personal-website/static/js/main.41d2f81a.js.map"
+    "main.c344f91e.js.map": "/matts-personal-website/static/js/main.c344f91e.js.map"
   },
   "entrypoints": [
     "static/css/main.5684ef1f.css",
-    "static/js/main.41d2f81a.js"
+    "static/js/main.c344f91e.js"
   ]
 }
