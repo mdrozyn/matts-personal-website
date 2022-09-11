@@ -2,6 +2,11 @@ import { Run, RunProps } from "./components/Run"
 import IMG_3336 from '../../images/RunningPage/TheCharcoalChallange/IMG_3336.jpg'
 import IMG_6365 from '../../images/RunningPage/TheCharcoalChallange/IMG_6365.jpg'
 import IMG_4524 from '../../images/RunningPage/ArtsAndParks/IMG_4524.jpg'
+import IMG_7037 from '../../images/RunningPage/TroegsRuggedTrail5KRunforConservation/IMG_7037.jpg'
+import IMG_7034 from '../../images/RunningPage/TroegsRuggedTrail5KRunforConservation/IMG_7034.jpg'
+import IMG_7031 from '../../images/RunningPage/TroegsRuggedTrail5KRunforConservation/IMG_7031.jpg'
+import IMG_5601 from '../../images/RunningPage/TroegsRuggedTrail5KRunforConservation/IMG_5601.jpg'
+import IMG_3447 from '../../images/RunningPage/TroegsRuggedTrail5KRunforConservation/IMG_3447.jpg'
 
 export function RunningPage() {
 
@@ -31,7 +36,25 @@ export function RunningPage() {
         Photos: [
             IMG_4524
         ]
-    }]
+    },
+    {
+        Name: "Tröegs Rugged Trail 5K Run for Conservation",
+        Date: "9/11/2022",
+        Location: "Millersburg PA",
+        Time: "36:35",
+        Position: 45,
+        TotalRunners: 114,
+        Notes: "The Ned Smith Center was awesome! Live music from Steal Your Face, good beer and pizza. Running up the hill was challanging, but it was a fun run!",
+        ResultsLink: "https://runsignup.com/Race/Results/60901#resultSetId-337381;perpage:100",
+        Photos: [
+            IMG_7037,
+            IMG_5601,
+            IMG_7031,
+            IMG_7034,
+            IMG_3447
+        ]
+    },
+]
 
     return (
         <>
