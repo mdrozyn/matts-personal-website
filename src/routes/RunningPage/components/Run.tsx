@@ -5,7 +5,7 @@ export function Run(props: RunProps) {
         <>
             <div className="run-container">
                 <h2 className="mb-3">{props.Name}</h2>
-                <div className="text-left ">
+                <div className="text-center ">
                     <div>
                         <strong>Date: </strong>
                         {props.Date}
@@ -31,7 +31,7 @@ export function Run(props: RunProps) {
                         {props.Notes}
                     </div>
                 </div>
-                <div className="mb-">
+                <div>
                     {props.Photos?.map((photo, index) => {
                         return (<img src={photo} key={index} className='photo p-3' alt='' />)
                     })}

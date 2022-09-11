@@ -29,7 +29,7 @@ export function AdaptivePhotoLayout() {
                 closed: () => {
                     document.body.style.overflow = 'visible';
                 },
-                changed: (context, index) => { window.history.pushState({}, '', `#viewPhoto?id=${index}`) }
+                changed: (context, index) => { window.history.pushState({}, '', `#/art?viewPhoto=${index}`) }
             },
             headerToolbar: ['close'],
             footerToolbar: ['zoomIn', 'zoomOut', 'prev', 'next']
@@ -42,7 +42,7 @@ export function AdaptivePhotoLayout() {
         addClosePhotoViewerOnStageClickEvent();
 
         if (pushNewState) {
-            window.history.pushState({}, '', `#viewPhoto?id=${index}`);
+            window.history.pushState({}, '', `#/art?viewPhoto=${index}`);
         }
     }
 
@@ -91,8 +91,8 @@ export function AdaptivePhotoLayout() {
 
         closePhotoViewer();
 
-        if (params.id !== undefined) {
-            displayPhotoViewer(Number(params.id), false);
+        if (params.viewPhoto !== undefined) {
+            displayPhotoViewer(Number(params.viewPhoto), false);
         }
     }
 
