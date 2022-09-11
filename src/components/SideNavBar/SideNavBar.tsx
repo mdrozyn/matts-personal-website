@@ -15,7 +15,7 @@ export function SideNavBar() {
                             Introduction
                         </NavLink>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <NavLink to="development" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} aria-current="page">
                             Development
                         </NavLink>
@@ -29,7 +29,7 @@ export function SideNavBar() {
                         <NavLink to="photos" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} aria-current="page">
                             Photos
                         </NavLink>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                         <NavLink to="art" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} aria-current="page">
                             Art
@@ -40,7 +40,7 @@ export function SideNavBar() {
                             Running
                         </NavLink>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <NavLink to="outdoors" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} aria-current="page">
                             Outdoors
                         </NavLink>
@@ -54,7 +54,7 @@ export function SideNavBar() {
                         <NavLink to="contact" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} aria-current="page">
                             Contact
                         </NavLink>
-                    </li>
+                    </li> */}
                 </ul>
                 <hr></hr>
             </div>
