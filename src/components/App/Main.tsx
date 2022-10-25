@@ -8,7 +8,9 @@ export function Main() {
         <HashRouter>
             <div className='d-flex flex-nowrap' style={{ height: "100vh" }}>
                 <SideNavBar />
-                <ContentPanel />
+                <div className="page-wrapper">
+                    <ContentPanel />
+                </div>
             </div>
         </HashRouter>
     )

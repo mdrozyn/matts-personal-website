@@ -3,11 +3,7 @@ a.nav-link:not(.active):hover {
 }
 
 .side-bar-nav {
-    width: 280px;
-    height: 100vh;
-    position: fixed;
-    z-index: 1;
-    background-color: var(--color-neutral-strongest) !important;
+    display: none;
 }
 
 .side-bar-nav a {
@@ -21,4 +17,16 @@ a.nav-link:not(.active):hover {
 .nav-link.active {
     color: var(--color-white) !important;
     background-color: var(--color-primary-moderate) !important;
+}
+
+@media (min-width: 992px) {
+    .side-bar-nav {
+        width: 280px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        z-index: 1;
+        background-color: var(--color-neutral-strongest) !important;
+    }
 }

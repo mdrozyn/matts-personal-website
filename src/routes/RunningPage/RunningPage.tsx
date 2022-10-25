@@ -68,7 +68,7 @@ export function RunningPage() {
         Time: "25:53",
         Position: 7,
         TotalRunners: 31,
-        Notes: "Got first for my age group! It was a beautiful day and we ran a loop around the lake at Shawnee State Park",
+        Notes: "Got first for my age group! It was a beautiful day and we ran a loop around the lake at Shawnee State Park.",
         ResultsLink: "https://runsignup.com/Race/Results/131245#resultSetId-346313;perpage:100",
         Photos: [
             MattAtFallFoliageClassic,
@@ -83,7 +83,7 @@ export function RunningPage() {
     ]
 
     return (
-        <div className="page-wrapper p-5 text-center">
+        <div className="p-5 text-center">
             <h1 className="mb-3">Running</h1>
             <p className="mb-5">A running list of all of the races that I have participated in.
             </p>

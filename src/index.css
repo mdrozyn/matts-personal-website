@@ -20,13 +20,15 @@ code {
   position: relative;
 }
 
-.fade-enter, .fade-appear {
+.fade-enter,
+.fade-appear {
   opacity: 0;
   position: absolute;
-  
+
 }
 
-.fade-enter-active, .fade-appear-active {
+.fade-enter-active,
+.fade-appear-active {
   opacity: 1;
   display: none;
 }
@@ -40,6 +42,8 @@ code {
   transition: opacity 150ms;
 }
 
-.page-wrapper{
-  margin-left: 280px;
+@media(min-width: 992px) {
+  .page-wrapper {
+    margin-left: 280px;
+  }
 }
