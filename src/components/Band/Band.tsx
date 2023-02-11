@@ -1,4 +1,5 @@
 import { PhotoSlideShow } from "../PhotoSlideShow/PhotoSlideShow";
+import "./Band.css"
 
 export function Band(props: BandProps) {
 	return (
@@ -9,9 +10,9 @@ export function Band(props: BandProps) {
 				</div>
 				<div className="row align-items-center">
 					<div className="col-6">
-						<p>
+						<pre>
 							{props.Bio}
-						</p>
+						</pre>
 					</div>
 					<div className="col-6">
 						<PhotoSlideShow
