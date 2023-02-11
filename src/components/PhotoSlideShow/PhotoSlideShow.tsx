@@ -3,11 +3,10 @@ import { getAlbum } from "../../services/google-photos.js/google-photos";
 import "./PhotoSlideShow.css"
 export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 
-	let [slideIndex, setSlideIndex] = useState(1);
+	let [slideIndex, setSlideIndex] = useState(0);
 	let [photoLinkUrls, setPhotoLinkUrls] = useState<string[]>([]);
 
 	const nextBtnRef = useRef<HTMLAnchorElement>(null);
-	let isAutoPlaying = useRef<boolean>(false);
 	let thisContainer = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
@@ -21,10 +20,9 @@ export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 			await new Promise(resolve => setTimeout(() => {
 				if (nextBtnRef.current)
 					nextBtnRef.current.click();
-				isAutoPlaying.current = false;
+				autoPlay();
 			}, 5000));
 		}
-
 
 		if (photoLinkUrls.length === 0) {
 			loadAlbum(props.googlePhotosAlbumId).then((data) => {
@@ -35,11 +33,11 @@ export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 			showSlides(slideIndex);
 		}
 
-		if (props.AutoPlay && !isAutoPlaying.current) {
+		if (props.AutoPlay) {
 			autoPlay();
-			isAutoPlaying.current = true;
 		}
-	});
+
+	}, []);
 
 	return (
 		<>
@@ -56,7 +54,7 @@ export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 			</div>
 			<div style={{ textAlign: 'center' }}>
 				<a className="prev" onClick={() => plusSlides(-1)}>❮</a>
-				<div className="numbertext">{photoLinkUrls.length > 0 ? `${slideIndex} / ${photoLinkUrls.length - 1}` : ''}</div>
+				<div className="numbertext">{photoLinkUrls.length > 0 ? `${slideIndex + 1} / ${photoLinkUrls.length}` : ''}</div>
 				<a ref={nextBtnRef} className="next" onClick={() => plusSlides(1)}>❯</a>
 			</div>
 		</>
@@ -69,10 +67,12 @@ export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 	function showSlides(n: number) {
 		if (!thisContainer.current) { return; }
 		let slides = thisContainer.current.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;
-		if (n === slides.length) { slideIndex = 1 }
+		if (slides.length === 1) {
+			slideIndex = 0;
+		}
+		if (n === slides.length) { slideIndex = 0 }
 		if (n < 1) { slideIndex = slides.length - 1 }
 		setSlideIndex(slideIndex);
-
 	}
 }
 

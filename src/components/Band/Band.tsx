@@ -14,7 +14,7 @@ export function Band(props: BandProps) {
 							{props.Bio}
 						</pre>
 					</div>
-					<div className="col-6">
+					<div className="col-6">{props.PhotoLinkUrl ? (
 						<PhotoSlideShow
 							googlePhotosAlbumId={props.PhotoLinkUrl}
 							photoViewStyle={{
@@ -23,6 +23,8 @@ export function Band(props: BandProps) {
 							}}
 							AutoPlay={true}
 						/>
+					) : undefined}
+
 					</div>
 				</div>
 			</div>
@@ -33,7 +35,7 @@ export function Band(props: BandProps) {
 export interface BandProps {
 	Name: string;
 	Bio: string;
-	PhotoLinkUrl: string
+	PhotoLinkUrl?: string
 	Releases?: string[],
 	backgroundColor?: string
 }
