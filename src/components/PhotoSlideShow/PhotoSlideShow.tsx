@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getAlbum } from "../../services/google-photos.js/google-photos";
 import "./PhotoSlideShow.css"
 export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 
 	let [slideIndex, setSlideIndex] = useState(1);
 	let [photoLinkUrls, setPhotoLinkUrls] = useState<string[]>([]);
+
+	const nextBtnRef = useRef<HTMLAnchorElement>(null);
+	let isAutoPlaying = useRef<boolean>(false);
 
 	useEffect(() => {
 
@@ -13,6 +16,15 @@ export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 			return photoLinks;
 		}
 
+		async function autoPlay() {
+			await new Promise(resolve => setTimeout(() => {
+				if (nextBtnRef.current)
+					nextBtnRef.current.click();
+					isAutoPlaying.current = false;
+			}, 5000));
+		}
+
+
 		if (photoLinkUrls.length === 0) {
 			loadAlbum(props.googlePhotosAlbumId).then((data) => {
 				setPhotoLinkUrls([...data]);
@@ -20,6 +32,11 @@ export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 		}
 		else {
 			showSlides(slideIndex);
+		}
+
+		if (props.AutoPlay && !isAutoPlaying.current) {
+			autoPlay();
+			isAutoPlaying.current = true;
 		}
 	});
 
@@ -39,7 +56,7 @@ export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 			<div style={{ textAlign: 'center' }}>
 				<a className="prev" onClick={() => plusSlides(-1)}>❮</a>
 				<div className="numbertext">{photoLinkUrls.length > 0 ? `${slideIndex} / ${photoLinkUrls.length - 1}` : ''}</div>
-				<a className="next" onClick={() => plusSlides(1)}>❯</a>
+				<a ref={nextBtnRef} className="next" onClick={() => plusSlides(1)}>❯</a>
 			</div>
 		</>
 	)
@@ -57,8 +74,9 @@ export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 }
 
 export interface PhotoSlideShowProps {
-	googlePhotosAlbumId: string;
-	photoViewStyle: PhotoViewStyle
+	googlePhotosAlbumId: string,
+	photoViewStyle: PhotoViewStyle,
+	AutoPlay?: boolean;
 }
 
 export interface PhotoViewStyle {

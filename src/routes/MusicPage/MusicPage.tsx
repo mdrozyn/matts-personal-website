@@ -11,6 +11,7 @@ export function MusicPage() {
                 Name="The Evergreen Drive"
                 Bio={_evergreenDriveBio}
                 PhotoLinkUrl="5GJTnHCXsdFRQMFbA"
+                backgroundColor="darkseagreen"
             />
         </div>
     )

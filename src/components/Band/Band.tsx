@@ -1,11 +1,10 @@
-import { ReactElement } from "react";
-import { PhotoSlideShow, PhotoSlideShowProps } from "../PhotoSlideShow/PhotoSlideShow";
+import { PhotoSlideShow } from "../PhotoSlideShow/PhotoSlideShow";
 
 export function Band(props: BandProps) {
 	return (
-		<div className="container">
+		<div className="container p-5 rounded" style={{ backgroundColor: props.backgroundColor }}>
 			<div className="col-12">
-				<div className="row pb-3">
+				<div className="row pb-5">
 					<h2>{props.Name}</h2>
 				</div>
 				<div className="row align-items-center">
@@ -21,6 +20,7 @@ export function Band(props: BandProps) {
 								width: '100%',
 								height: '350px',
 							}}
+							AutoPlay={true}
 						/>
 					</div>
 				</div>
@@ -33,5 +33,6 @@ export interface BandProps {
 	Name: string;
 	Bio: string;
 	PhotoLinkUrl: string
-	Releases?: string[]
+	Releases?: string[],
+	backgroundColor?: string
 }
