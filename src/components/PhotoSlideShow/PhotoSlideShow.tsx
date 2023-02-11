@@ -51,7 +51,7 @@ export function PhotoSlideShow(props: PhotoSlideShowProps) {
 	function showSlides(n: number) {
 		let slides = document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;
 		if (n === slides.length) { slideIndex = 1 }
-		if (n < 1) { slideIndex = slides.length -1 }
+		if (n < 1) { slideIndex = slides.length - 1 }
 		setSlideIndex(slideIndex);
 	}
 }
