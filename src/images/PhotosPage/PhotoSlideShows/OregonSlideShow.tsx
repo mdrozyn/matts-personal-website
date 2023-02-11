@@ -5,6 +5,7 @@ export function OregonSlideShow() {
             photoViewStyle={{
                 width: '100%',
                 height: '480px',
+                backgroundColor: "black"
             }}
         /> 
     )

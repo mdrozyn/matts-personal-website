@@ -1,5 +1,5 @@
 import "react-image-gallery/styles/css/image-gallery.css";
-import {OregonSlideShow } from "./AlbumExports/OregonSlideShow";
+import {OregonSlideShow } from "../../images/PhotosPage/PhotoSlideShows/OregonSlideShow";
 
 
 export function PhotosPage() {

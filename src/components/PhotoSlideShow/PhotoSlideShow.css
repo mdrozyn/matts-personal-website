@@ -15,7 +15,7 @@ img {
 /* Slideshow container */
 .slideshow-container {
 	margin: auto;
-	background: black;
+	/* background: black; */
 }
 
 .slideshow-container img {

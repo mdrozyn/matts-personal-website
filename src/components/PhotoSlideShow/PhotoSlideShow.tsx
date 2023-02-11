@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAlbum } from "../../services/google-photos.js/google-photos";
 import "./PhotoSlideShow.css"
-export function PhotoSlideShow(props: PhotoSlideShowProps) {
+export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 
 	let [slideIndex, setSlideIndex] = useState(1);
 	let [photoLinkUrls, setPhotoLinkUrls] = useState<string[]>([]);
@@ -63,5 +63,6 @@ export interface PhotoSlideShowProps {
 
 export interface PhotoViewStyle {
 	width: string,
-	height: string
+	height: string,
+	backgroundColor?: string;
 }
