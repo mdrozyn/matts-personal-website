@@ -20,8 +20,8 @@ export function ContentPanel() {
                     <Routes location={location}>
                         <Route path="/" element={<Navigate replace to="introduction" />} />
                         <Route path="introduction" element={<IntroductionPage />} />
-                        {/* <Route path="development" element={<DevelopmentPage />} />
-                        <Route path="music" element={<MusicPage />} /> */}
+                        {/* <Route path="development" element={<DevelopmentPage />} /> */}
+                        <Route path="music" element={<MusicPage />} /> 
                         <Route path="photos" element={<PhotosPage />} />
                         <Route path="art" element={<ArtPage />} />
                         <Route path="running" element={<RunningPage />} />

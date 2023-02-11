@@ -19,12 +19,12 @@ export function SideNavBar() {
                         <NavLink to="development" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} aria-current="page">
                             Development
                         </NavLink>
-                    </li>
+                    </li> */}
                     <li className="nav-item">
                         <NavLink to="music" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} aria-current="page">
                             Music
                         </NavLink>
-                    </li> */}
+                    </li>
                     <li className="nav-item">
                         <NavLink to="photos" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} aria-current="page">
                             Photos
