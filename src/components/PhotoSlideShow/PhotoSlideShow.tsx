@@ -8,6 +8,7 @@ export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 
 	const nextBtnRef = useRef<HTMLAnchorElement>(null);
 	let isAutoPlaying = useRef<boolean>(false);
+	let thisContainer = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 
@@ -20,7 +21,7 @@ export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 			await new Promise(resolve => setTimeout(() => {
 				if (nextBtnRef.current)
 					nextBtnRef.current.click();
-					isAutoPlaying.current = false;
+				isAutoPlaying.current = false;
 			}, 5000));
 		}
 
@@ -42,7 +43,7 @@ export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 
 	return (
 		<>
-			<div className="slideshow-container" style={props.photoViewStyle}>
+			<div className="slideshow-container" style={props.photoViewStyle} ref={thisContainer}>
 				{
 					photoLinkUrls.map((value, index) => {
 						return (
@@ -66,10 +67,12 @@ export const PhotoSlideShow = (props: PhotoSlideShowProps) => {
 	}
 
 	function showSlides(n: number) {
-		let slides = document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;
+		if (!thisContainer.current) { return; }
+		let slides = thisContainer.current.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;
 		if (n === slides.length) { slideIndex = 1 }
 		if (n < 1) { slideIndex = slides.length - 1 }
 		setSlideIndex(slideIndex);
+
 	}
 }
 
