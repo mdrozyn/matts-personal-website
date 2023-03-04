@@ -26,11 +26,6 @@ export function SideNavBar() {
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink to="photos" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} aria-current="page">
-                            Photos
-                        </NavLink>
-                    </li>
-                    <li className="nav-item">
                         <NavLink to="art" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} aria-current="page">
                             Art
                         </NavLink>
@@ -38,6 +33,11 @@ export function SideNavBar() {
                     <li className="nav-item">
                         <NavLink to="running" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} aria-current="page">
                             Running
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="photos" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} aria-current="page">
+                            Photos
                         </NavLink>
                     </li>
                     {/* <li className="nav-item">

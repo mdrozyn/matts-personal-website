@@ -14,12 +14,12 @@ export function Band(props: BandProps) {
 							{props.Bio}
 						</pre>
 					</div>
-					<div className="col-6">{props.PhotoLinkUrl ? (
+					<div className="col-6 align-self-baseline">{props.PhotoLinkUrl ? (
 						<PhotoSlideShow
 							googlePhotosAlbumId={props.PhotoLinkUrl}
 							photoViewStyle={{
 								width: '100%',
-								height: '350px',
+								height: '400px',
 							}}
 							AutoPlay={true}
 						/>
